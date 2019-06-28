@@ -46,7 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/register").permitAll()
 		.antMatchers("/adduser").permitAll()
 		.antMatchers("/activatelink/**").permitAll()
-		.antMatchers("/admin").hasAuthority("ROLE_ADMIN") // kazde wykonanie ktore bedzie mialo "admin" musi byc wykonane przez uzytkownika ktory ma role admin
+	//	.antMatchers("/admin").hasAuthority("ROLE_ADMIN") // kazde wykonanie ktore bedzie mialo "admin" musi byc wykonane przez uzytkownika ktory ma role admin
 		.anyRequest().authenticated()
 		.and().csrf().disable()
 		.formLogin()

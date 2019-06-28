@@ -2,6 +2,7 @@ package Mateusz.demo.user;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -47,7 +48,13 @@ public class UserServiceImpl implements UserService{
 		userRepository.updateUserProfile(newName, newLastName, newEmail, id);
 	}
 
+	@Override
+	public List<User> findAll() {
+		List<User> userList = userRepository.findAll();
+		return userList;
+	}
 
+	
 	
 }
 
